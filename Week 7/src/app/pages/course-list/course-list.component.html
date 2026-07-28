@@ -1,0 +1,30 @@
+<section class="course-list">
+  <h2>Courses</h2>
+
+  <div class="search-row">
+    <input
+      [(ngModel)]="searchTerm"
+      (keyup.enter)="onSearch()"
+      placeholder="Search courses (updates URL)..."
+    />
+    <button (click)="onSearch()">Search</button>
+  </div>
+
+  <p *ngIf="isLoading$ | async">Loading courses...</p>
+  <p class="error-text" *ngIf="error$ | async as err">{{ err }}</p>
+
+  <ng-container *ngIf="(isLoading$ | async) === false">
+    <div *ngIf="(courses$ | async)?.length; else noCourses">
+      <div
+        *ngFor="let course of courses$ | async; trackBy: trackByCourseId"
+        (click)="goToCourse(course)"
+        class="clickable"
+      >
+        <app-course-card [course]="course"></app-course-card>
+      </div>
+    </div>
+    <ng-template #noCourses>
+      <p>No courses available.</p>
+    </ng-template>
+  </ng-container>
+</section>

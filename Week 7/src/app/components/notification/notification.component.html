@@ -1,0 +1,4 @@
+<div class="notification" *ngIf="notificationService.message$ | async as msg">
+  {{ msg }}
+  <button class="secondary" (click)="notificationService.clear()">Dismiss</button>
+</div>

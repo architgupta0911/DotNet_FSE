@@ -1,0 +1,5 @@
+.form-page { padding: 24px; max-width: 480px; margin: 0 auto; }
+.field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 14px; }
+.array-row { display: flex; gap: 8px; margin-bottom: 6px; }
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+.success { margin-top: 14px; color: #166534; background: #dcfce7; padding: 10px; border-radius: 6px; }

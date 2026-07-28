@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: #1e293b;
+  color: #fff;
+}
+.brand { font-weight: 700; font-size: 18px; }
+.links { display: flex; gap: 18px; }
+.links a { text-decoration: none; color: #cbd5e1; font-size: 14px; }
+.links a.active { color: #fff; font-weight: 600; }

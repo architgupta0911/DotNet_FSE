@@ -1,0 +1,6 @@
+.hero { padding: 24px; max-width: 720px; margin: 0 auto; }
+.stats { display: flex; gap: 24px; margin: 20px 0; }
+.stat { text-align: center; }
+.stat strong { display: block; font-size: 24px; }
+.stat span { font-size: 13px; color: #64748b; }
+.search { margin-top: 20px; }

@@ -1,0 +1,11 @@
+main { min-height: calc(100vh - 60px); }
+.spinner-bar {
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #93c5fd, #2563eb);
+  background-size: 200% 100%;
+  animation: loading-slide 1s linear infinite;
+}
+@keyframes loading-slide {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

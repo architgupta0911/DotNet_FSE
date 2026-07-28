@@ -1,0 +1,11 @@
+<section class="profile">
+  <h2>My Profile</h2>
+  <p>Enrolled Courses</p>
+
+  <ul *ngIf="enrolledCourses.length; else none">
+    <li *ngFor="let c of enrolledCourses">{{ c.name }} ({{ c.code }})</li>
+  </ul>
+  <ng-template #none>
+    <p>You haven't enrolled in any courses yet.</p>
+  </ng-template>
+</section>
